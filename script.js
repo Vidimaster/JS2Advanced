@@ -42,7 +42,7 @@ class Library {
 
     removeBook(title) {
         try {
-            if (this.hasBook(title)) throw "Library doesn't have this book";
+            if (!this.hasBook(title)) throw "Library doesn't have this book";
             this.#books.splice(this.#books.indexOf(title), 1)
         }
         catch (err) {
