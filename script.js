@@ -55,7 +55,7 @@ class Library {
     }
 }
 
-Library1 = new Library("title1", "title2", "title3");
+Library1 = new Library(["title1", "title2", "title3"]);
 
 console.log(Library1.hasBook("title2"));
 console.log(Library1.hasBook("title4"));
