@@ -131,7 +131,7 @@ document.getElementById('frm').innerHTML += `        <br><br><p id="sendRev"><b>
 function create() {
     let rev = document.getElementById("review").value;
     try {
-        if (rev.length > 500 || rev.length < 50) throw "Incorrect text lenght";
+        if (rev.length > 500 || rev.length < 50) throw new Error("Incorrect text lenght");
         document.getElementById('frm').innerHTML += `<br><p><b>Product</b></p>`;
         document.getElementById('review').style.display = 'none';
         document.getElementById('btn').style.display = 'none';
@@ -139,7 +139,7 @@ function create() {
         document.getElementById('frm').innerHTML += `<q> ${rev}</q><br>`;
     }
     catch (err) {
-        console.log(err);
+        console.log(err.message);
     }
 
 }
